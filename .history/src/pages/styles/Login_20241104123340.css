@@ -1,25 +1,23 @@
 :root {
   --color-lila: #C291F2; 
-  --color-lilaclaro: #E6DFF1; /* Color lila claro ajustado */
-  --color-texto: #333333; /* Texto en gris oscuro */
+  --color-lilaclaro: #e1d2ef; /* Color lila claro */
+  --color-texto: #000000;
   --color-fussia: #D504D9;
   --color-azul: #79C4F2;
   --color-mostaza: #F2B705;
-  --color-naranja: #FF914D; /* Naranja ajustado para botones */
-  --color-input: #F3E9FA; /* Fondo para inputs */
+  --color-naranja: #F28705;
+  --color-input: #EEF5F9;
   --color-blanquito: #ffffff;
-  --color-celeste: #A3D2F2; /* Azul celeste suave */
+  --color-celeste: #79C4F2;
   --color-rgba-rojo: rgba(255, 0, 0, 0.1);
-  --color-rojo: #E74C3C; /* Rojo suave para acentos */
+  --color-rojo: #FF0000;
 }
-
 .login {
   display: flex;
   justify-content: center;
-  font-family: Arial, sans-serif; 
   align-items: center;
   height: calc(100vh - 60.7px);
-  background-color: var(--color-lilaclaro); /* Fondo lila claro */
+  background-color: var(--color-azul);
 }
 
 .login__form,
@@ -29,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-blanquito); /* Fondo blanco */
+  background-color:--color-gray;
   padding: 20px;
   border-radius: 10px;
   font-size: 20px;
@@ -38,27 +36,24 @@
 
 .login__logged-icon {
   font-size: 100px;
-  color: var(--color-fussia); /* Ícono en color fucsia */
 }
 
 .login__logged-btn {
   border: none;
-  background-color: var(--color-naranja); /* Botón naranja */
-  color: var(--color-blanquito);
+  background-color: var(--color-blanquito);
+  color: white;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .login__title {
-  font-family: Arial, sans-serif; 
   text-align: start;
   font-size: 23px;
-  color: var(--color-texto); /* Texto en gris oscuro */
 }
 
 .login__container-test {
-  background-color: var(--color-lila); /* Fondo para contenedor de prueba */
+  background-color:(var(--color-azul));
   width: 100%;
   border-radius: 10px;
   text-align: start;
@@ -68,7 +63,6 @@
 
 .login__test-title {
   text-align: center;
-  color: var(--color-texto);
 }
 
 .login__field {
@@ -82,17 +76,16 @@
 
 .login__input {
   padding: 10px 15px;
-  border: 1px solid var(--color-lila); /* Borde lila */
+  border: 1px solid var(--color-gray);
   font-size: 15px;
-  background-color: var(--color-blanquito); /* Fondo blanco para inputs */
 }
 
 .login__btn {
   width: 100%;
   padding: 10px 15px;
   border: none;
-  background-color: var(--color-fussia); /* Botón de envío en fucsia */
-  color: var(--color-blanquito);
+  background-color: var(--color-red);
+  color: white;
   cursor: pointer;
 }
 
@@ -102,5 +95,4 @@
   text-align: start;
   margin: 0;
   margin-top: 20px;
-  color: var(--color-texto);
 }

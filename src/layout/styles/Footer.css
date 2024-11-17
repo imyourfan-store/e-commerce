@@ -1,0 +1,50 @@
+:root {
+    --color-lila: #C291F2; 
+    --color-lilaclaro: #e1d2ef; /* Color lila claro */
+    --color-texto: #000000;
+    --color-fussia: #D504D9;
+    --color-azul: #79C4F2;
+    --color-mostaza: #F2B705;
+    --color-naranja: #F28705;
+    --color-input: #EEF5F9;
+    --color-blanquito: #ffffff;
+    --color-celeste: #79C4F2;
+    --color-rgba-rojo: rgba(255, 0, 0, 0.1);
+    --color-rojo: #FF0000;
+}
+
+.footer {
+    background-color: var(--color-lila); 
+    color: var(--color-blanquito); 
+    padding: 20px;
+    text-align: center; 
+    position: relative; 
+    bottom: 0;
+    width: 100%; 
+}
+
+.footer__content {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.footer__socials {
+    list-style: none; 
+    padding: 0; 
+    margin: 10px 0 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.footer__socials li {
+    margin: 0 10px; 
+}
+
+.footer__socials a {
+    color: var(--color-blanquito); 
+    text-decoration: none; 
+    font-size: 24px; 
+} 
+.footer__socials a:hover {
+    color: var(--color-fussia); 
+}

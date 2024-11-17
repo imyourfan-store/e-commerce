@@ -7,7 +7,7 @@ import Purchases from './pages/Purchases'
 import Cart from './pages/Cart'
 import ProtectedRoutes from './components/app/ProtectedRoutes'
 import Header from './layout/Header'
-import Footer from './layout/Footer'
+import Footer from './layout/styles/Footer.css'
 
 function App() {
 

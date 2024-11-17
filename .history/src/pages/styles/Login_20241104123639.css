@@ -16,7 +16,6 @@
 .login {
   display: flex;
   justify-content: center;
-  font-family: Arial, sans-serif; 
   align-items: center;
   height: calc(100vh - 60.7px);
   background-color: var(--color-lilaclaro); /* Fondo lila claro */
@@ -51,7 +50,6 @@
 }
 
 .login__title {
-  font-family: Arial, sans-serif; 
   text-align: start;
   font-size: 23px;
   color: var(--color-texto); /* Texto en gris oscuro */

@@ -28,7 +28,6 @@
   font-size: 12px;
   color: var(--color-blanquito);
   flex: 1 1;
-  text-decoration: none;
   margin-left: 10px;
   transition: transform 0.3s ease; /* Agrega una transición para el zoom */
   overflow: hidden; /* Asegura que el contenido no se salga */

@@ -1,6 +1,6 @@
 :root {
   --color-lila: #C291F2; 
-  --color-lilaclaro: #e1d7ea;/* Color lila claro */
+  --color-lilaclaro: #e1d2ef;/* Color lila claro */
   --color-texto: #000000;
   --color-fussia: #D504D9;
   --color-azul: #79C4F2;
@@ -15,7 +15,6 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif; 
-  background-color: var(--color-lilaclaro); 
-  text-decoration: none;
+  font-family: Arial, sans-serif; /* Tipo de letra uniforme */
+  background-color: var(--color-lilaclaro); /* Usar la variable correctamente */
 }

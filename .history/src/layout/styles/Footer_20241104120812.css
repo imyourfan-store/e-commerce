@@ -1,0 +1,57 @@
+:root {
+    --color-lila: #C291F2; 
+    --color-lilaclaro: #e1d2ef;/* Color lila claro */
+    --color-texto: #000000;
+    --color-fussia: #D504D9;
+    --color-azul: #79C4F2;
+    --color-mostaza: #F2B705;
+    --color-naranja: #F28705;
+    --color-input: #EEF5F9;
+    --color-blanquito: #ffffff;
+    --color-celeste: #79C4F2;
+    --color-rgba-rojo: rgba(255, 0, 0, 0.1);
+    --color-rojo: #FF0000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Tipo de letra uniforme */
+    background-color: var(--color-lilaclaro); /* Usar la variable correctamente */
+}
+.footer {
+    background-color: var(--color-lila); /* Fondo lila claro */
+    color: var(--color-blanquito); /* Color del texto */
+    padding: 20px;
+    text-align: center; /* Centrar el contenido */
+    position: relative; /* Posición relativa para el footer */
+    bottom: 0;
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+}
+
+.footer__content {
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.footer__socials {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 10px 0 0; /* Margen superior para separar del texto */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: center; /* Centrar los iconos */
+}
+
+.footer__socials li {
+    margin: 0 10px; /* Espacio entre los iconos */
+}
+
+.footer__socials a {
+    color: var(--color-blanquito); /* Color de los enlaces */
+    text-decoration: none; /* Quitar el subrayado */
+    font-size: 24px; /* Tamaño de los iconos */
+}
+
+.footer__socials a:hover {
+    color: var(--color-fussia); /* Cambiar color al pasar el mouse */
+}
+

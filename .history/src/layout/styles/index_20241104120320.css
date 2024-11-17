@@ -1,0 +1,20 @@
+:root {
+    --color-lila: #C291F2; 
+    --color-lila: #e1d2ef;/* Color lila claro */
+    --color-texto: #000000;
+    --color-fussia: #D504D9;
+    --color-azul: #79C4F2;
+    --color-mostaza: #F2B705;
+    --color-naranja: #F28705;
+    --color-input: #EEF5F9;
+    --color-blanquito: #ffffff;
+    --color-celeste: #79C4F2;
+    --color-rgba-rojo: rgba(255, 0, 0, 0.1);
+    --color-rojo: #FF0000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Tipo de letra uniforme */
+    background-color: var(--color-lila); /* Usar la variable correctamente */
+}
