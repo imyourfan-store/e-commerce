@@ -94,17 +94,20 @@
   background-color: var(--color-fussia); /* Botón de envío en fucsia */
   color: var(--color-blanquito);
   cursor: pointer;
-  font-size: 15px;
+}
+span {
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: #F28705; /* Color del texto (puedes cambiarlo por el que prefieras) */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+  text-decoration: underline; /* Subraya el texto */
+  padding: 5px 10px; /* Espaciado alrededor del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave para interacciones */
 }
 
-.login__text-footer span {
-  color: var(--color-fussia) ;
-  cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.login__text-footer span:hover {
-  text-decoration: underline;
-  color: var(--color-blanquito) 
+/* Efecto hover */
+span:hover {
+  color: #D504D9; /* Cambio de color al pasar el mouse */
+  background-color: #EEF5F9; /* Fondo con color suave */
 }

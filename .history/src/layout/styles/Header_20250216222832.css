@@ -23,20 +23,20 @@
   border-bottom: 1px solid var(--color-gray);
   text-decoration: none;
 }
+
+
 .header__logo {
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%; 
-  object-fit: cover; /* Asegura que la imagen no se distorsione */
-  
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: 100px; /* Ajusta el tamaño de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  object-fit: cover;
   margin-top: auto; 
-  margin-bottom: auto; 
-  
-  margin-left: auto; 
-  margin-right: auto; 
-  
-  padding-left: 15px; 
-  padding-right: 15px; 
+  margin-bottom: auto;/* Asegura que la imagen no se distorsione */
+  margin-right: auto; /* Espacio entre la imagen y el texto */
+  margin-left: auto; /* Centra la imagen en el contenedor */
+  margin-right: auto;
+  padding: 10px; /* Aplica el mismo espacio en todos los lados */
+
 }
 
 .header__page-name {

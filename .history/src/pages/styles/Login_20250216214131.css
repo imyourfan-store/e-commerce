@@ -1,0 +1,156 @@
+/* Estilos generales */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #c291f2, #79c4f2);
+  padding: 20px;
+}
+
+/* Formulario */
+.login__form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Sección de prueba */
+.login__container-test {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login__test-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login__test-email, .login__test-password {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.login__test-email i,
+.login__test-password i {
+  margin-right: 5px;
+}
+
+/* Campos del formulario */
+.login__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login__label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.login__input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login__input:focus {
+  border-color: #d504d9;
+  outline: none;
+}
+
+/* Botón */
+.login__btn {
+  width: 100%;
+  padding: 10px;
+  background: #d504d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login__btn:hover {
+  background: #b003b0;
+}
+
+/* Texto final */
+.login__text-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login__text-footer span {
+  color: #d504d9;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Sección usuario logueado */
+.login__logged {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login__logged-icon {
+  font-size: 3rem;
+  color: #d504d9;
+}
+
+.login__logged-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.login__logged-btn {
+  background: #f28705;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login__logged-btn:hover {
+  background: #c96a03;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .login__form, .login__logged {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .login__title {
+    font-size: 1.3rem;
+  }
+}

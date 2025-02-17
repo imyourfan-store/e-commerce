@@ -24,28 +24,28 @@
   text-decoration: none;
 }
 .header__logo {
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%; 
-  object-fit: cover; /* Asegura que la imagen no se distorsione */
-  
-  margin-top: auto; 
-  margin-bottom: auto; 
-  
-  margin-left: auto; 
-  margin-right: auto; 
-  
-  padding-left: 15px; 
-  padding-right: 15px; 
+  width: 50px; /
+  height: auto;
+  margin-right: 5px; 
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+  transition: transform 0.3s ease; /* Agrega una transición para el zoom */
+}
+
+/* Efecto de zoom */
+.header__page-name:hover .header__logo {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al hacer hover */
 }
 
 .header__page-name {
   font-size: 12px;
   color: var(--color-blanquito);
+  flex: 1 1;
   text-decoration: none;
-  display: flex;
-  align-items: center; /* Asegura que el texto y la imagen estén alineados */
-  transition: transform 0.3s ease;
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Agrega una transición para el zoom */
+  overflow: hidden; /* Asegura que el contenido no se salga */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 /* Efecto de zoom */

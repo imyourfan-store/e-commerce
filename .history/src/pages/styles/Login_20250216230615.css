@@ -94,14 +94,13 @@
   background-color: var(--color-fussia); /* Botón de envío en fucsia */
   color: var(--color-blanquito);
   cursor: pointer;
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .login__text-footer span {
   color: var(--color-fussia) ;
   cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
 }
 
 .login__text-footer span:hover {

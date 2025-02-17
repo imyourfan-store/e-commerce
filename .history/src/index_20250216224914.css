@@ -1,0 +1,191 @@
+:root {
+  --color-lila: #C291F2; 
+  --color-lilaclaro: #e1d7ea;/* Color lila claro */
+  --color-texto: #000000;
+  --color-fussia: #D504D9;
+  --color-azul: #79C4F2;
+  --color-mostaza: #F2B705;
+  --color-naranja: #F28705;
+  --color-input: #EEF5F9;
+  --color-blanquito: #ffffff;
+  --color-celeste: #79C4F2;
+  --color-rgba-rojo: rgba(255, 0, 0, 0.1);
+  --color-rojo: #FF0000;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; 
+  background-color: var(--color-lilaclaro); 
+  text-decoration: none;
+}
+/* Variables de colores */
+:root {
+  --lila: #C291F2;
+  --texto: #000000;
+  --fucsia: #D504D9;
+  --azul: #79C4F2;
+  --mostaza: #F2B705;
+  --naranja: #F28705;
+  --input: #EEF5F9;
+}
+
+/* Estilo general */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: var(--texto);
+}
+
+h1, h2, h3 {
+  color: var(--fucsia);
+}
+
+a {
+  text-decoration: none;
+  color: var(--texto);
+}
+
+/* Navbar */
+.navbar_search {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.search_icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: var(--azul);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button-primary {
+  background-color: var(--fucsia);
+}
+
+.button-saber-mas {
+  background-color: var(--mostaza);
+}
+
+.navbar_toogle-btn {
+  display: none;
+}
+
+.navbar_mobile-menu {
+  display: none;
+}
+
+.nav_list-mobile {
+  list-style: none;
+  padding: 0;
+}
+
+.nav_link-mobile {
+  padding: 10px;
+  background-color: var(--lila);
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.nav_link-mobile a {
+  color: #fff;
+}
+
+/* Sección de Sobre Nosotros */
+.sobre-nosotros {
+  padding: 40px;
+  background-color: var(--input);
+  color: var(--texto);
+}
+
+.sobre-nosotros h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.mision-vision {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.mision, .vision {
+  text-align: center;
+  width: 45%;
+}
+
+.mision img, .vision img {
+  width: 80%;
+  height: auto;
+}
+
+.mision h3, .vision h3 {
+  color: var(--azul);
+}
+
+.valores {
+  padding: 20px;
+  background-color: var(--lila);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.valores h3 {
+  text-align: center;
+  color: var(--naranja);
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+}
+
+.valores li {
+  margin: 10px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .navbar_search {
+    justify-content: center;
+  }
+
+  .mision-vision {
+    flex-direction: column;
+  }
+
+  .mision, .vision {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .navbar_toogle-btn {
+    display: block;
+  }
+
+  .navbar_mobile-menu {
+    display: block;
+  }
+
+  .nav_list-mobile {
+    padding: 0;
+    background-color: var(--azul);
+    text-align: center;
+  }
+
+  .nav_link-mobile {
+    background-color: var(--fucsia);
+    margin: 5px 0;
+  }
+}

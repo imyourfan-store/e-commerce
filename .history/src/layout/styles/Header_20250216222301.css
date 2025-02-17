@@ -11,7 +11,18 @@
   --color-rgba-rojo: rgba(255, 0, 0, 0.1);
   --color-rojo: #FF0000;
 }
-
+.header__page-name {
+  display: flex; /* Alinea la imagen y el texto horizontalmente */
+  align-items: center; /* Asegura que la imagen y el texto estén alineados verticalmente */
+  font-size: 12px;
+  color: var(--color-blanquito);
+  flex: 1 1;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,29 +34,17 @@
   border-bottom: 1px solid var(--color-gray);
   text-decoration: none;
 }
-.header__logo {
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%; 
-  object-fit: cover; /* Asegura que la imagen no se distorsione */
-  
-  margin-top: auto; 
-  margin-bottom: auto; 
-  
-  margin-left: auto; 
-  margin-right: auto; 
-  
-  padding-left: 15px; 
-  padding-right: 15px; 
-}
+
 
 .header__page-name {
   font-size: 12px;
   color: var(--color-blanquito);
+  flex: 1 1;
   text-decoration: none;
-  display: flex;
-  align-items: center; /* Asegura que el texto y la imagen estén alineados */
-  transition: transform 0.3s ease;
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Agrega una transición para el zoom */
+  overflow: hidden; /* Asegura que el contenido no se salga */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 /* Efecto de zoom */

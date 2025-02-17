@@ -1,0 +1,546 @@
+:root{
+  --color-lila:#C291F2;
+  --color-texto:#000000;
+  --color-fussia:#D504D9;
+  --color-azul:#79C4F2;
+  --color-mostaza:#F2B705;
+  --color-naranja:#F28705;
+  --color-input:#EEF5F9;
+
+  --color-celeste: #79C4F2; 
+  --color-rgba-rojo: rgba(255, 0, 0, 0.1); 
+  --color-rojo: #FF0000; 
+ 
+}
+  
+.input-error{
+  border: 1px solid var(--color-rojo) !important;
+}
+/*========================================
+Estilos generales
+==========================================*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f7f9fd;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  
+}
+
+a{
+  text-decoration: none;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+.contenedor-login{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+/*========================================
+Estilos del contenedor slider
+==========================================*/
+.contenedor-slider{
+  width: calc(100% - 520px);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide{
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: none;
+  position: relative;
+  justify-content: center;
+}
+
+.slide.active{
+  display: flex;
+}
+
+.slide img{
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+}
+
+
+/*========================================
+Estilos contenido slider
+==========================================*/
+/* Contenedor del slider */
+.contenedor-slider {
+  position: relative;
+  max-width: 80%; /* Ajustar según sea necesario */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animación slide */
+.fade {
+  animation: fade 1.5s ease-in-out;
+  -webkit-animation: fade 1.5s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* botones next y prev */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  background: var(--color-texto);
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all .6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  outline: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background: var(--color-negro);
+}
+
+/* puntos */
+.dots {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+}
+
+.dots .dot {
+  outline: 0;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  border: 1px solid var(--color-celeste);
+  border-radius: 4px;
+  display: inline-block;
+  transition: all .6s ease-in-out;
+}
+
+.dots .dot.active {
+  background: var(--color-celeste);
+  width: 30px;
+}/*========================================
+Estilos contenedor formularios
+==========================================*//*========================================
+Estilos contenedor formularios
+==========================================*/
+.contenedor-texto {
+  width: 100%;
+  height: 100vh; /* Ajustar al 100% de la altura de la ventana */
+  overflow: hidden;
+  overflow-y: auto;
+  background: linear-gradient(135deg, var(--color-lila), var(--color-azul), var(--color-fussia));
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex; /* Utilizar flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+/* Estilo para el contenedor del logo */
+.logo_login {
+  display: flex; /* Usar flexbox para centrar el contenido */
+  justify-content: center; /* Centrar el logo horizontalmente */
+  align-items: center; /* Centrar el logo verticalmente */
+  width: 100%; /* O ajustar a un tamaño específico según el diseño */
+  height: 100%; /* O ajustar a un tamaño específico según el diseño */
+}
+
+/* Estilo para la imagen del logo */
+.logo_login img {
+  max-width: 130px; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  border-radius: 8px; /* Opcional: añadir bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: añadir sombra al logo */
+  transition: transform 0.3s ease; /* Opcional: añadir transición para el efecto de hover */
+  margin: 12px;
+}
+
+/* Efecto de hover opcional */
+.logo_login img:hover {
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón sobre el logo */
+}
+
+.contenedor-form {
+  width: 80%; /* Ajustar el ancho al 80% del contenedor padre */
+  max-width: 400px; /* Ajustar el ancho máximo a 400px */
+  padding: 30px; /* Reducir el padding */
+  background: var(--color-input);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.contenedor-form .titulo {
+  font-size: 22px; /* Ajustar el tamaño del texto */
+  font-weight: 700;
+  margin-bottom: 15px; /* Reducir el margen inferior */
+  color: var(--color-texto);
+}
+
+.contenedor-form .descripcion {
+  font-size: 14px; /* Ajustar el tamaño del texto */
+  color: var(--color-texto);
+}
+
+/* Animación para el degradado */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+.titulo {
+  font-size: 36px; /* Tamaño de fuente grande para el título */
+  font-weight: bold; /* Hacer el texto en negrita */ 
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilos para la descripción */
+.descripcion {
+  font-size: 18px; /* Tamaño de fuente más pequeño que el título */
+  color: var(--color-texto); /* Color del texto, usa la misma variable de color para coherencia */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 30px; /* Espacio debajo de la descripción */
+}
+
+/*========================================
+Estilos Tabs
+==========================================*/
+.tabs-links {
+  margin-top: 40px; /* Reducir el margen superior */
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 10px;
+}
+
+.tabs-links .tab-link {
+  font-size: 14px; /* Ajustar el tamaño del texto */
+  margin-right: 20px; /* Reducir el margen derecho */
+  color: var(--color-texto);
+  cursor: pointer;
+  position: relative;
+}
+
+.tabs-links .tab-link.active {
+  color: var(--color-celeste);
+  font-weight: 700;
+}
+
+.tabs-links .tab-link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--color-celeste);
+  left: 0;
+  bottom: -10px;
+}
+
+/*========================================
+Estilos Formularios
+==========================================*/
+.formulario {
+  display: none;
+  margin-top: 20px; /* Reducir el margen superior */
+}
+
+.formulario.active {
+  display: block;
+}
+
+.formulario .input-text {
+  padding: 12px 18px; /* Ajustar el padding */
+  border: 1px solid transparent;
+  background: var(--color-input);
+  margin-bottom: 15px; /* Reducir el margen inferior */
+  border-radius: 3px;
+  width: 100%;
+  outline: 0;
+  font-size: 14px;
+  color: var(--color-texto);
+}
+
+.formulario .grupo-input {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px; /* Reducir el margen inferior */
+}
+
+.formulario .grupo-input .input-text {
+  padding-right: 50px; /* Reducir el padding derecho */
+  margin-bottom: 0px;
+}
+
+.formulario .grupo-input .icono {
+  position: absolute;
+  width: 50px; /* Reducir el ancho */
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 18px;
+  color: var(--color-texto);
+  right: 0;
+  outline: 0;
+}
+
+.formulario .grupo-input .icono.active {
+  color: var(--color-celeste);
+}
+
+.formulario .input-text:focus {
+  border: 1px solid green;
+}
+
+.link {
+  font-size: 13px; /* Ajustar el tamaño del texto */
+  color: var(--color-celeste);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.formulario .btn {
+  width: 100%;
+  padding: 12px; /* Ajustar el padding */
+  border: none;
+  background: var(--color-celeste);
+  color: #fff;
+  font-size: 13px; /* Ajustar el tamaño del texto */
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 20px; /* Reducir el margen superior */
+  outline: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.formulario .btn:hover {
+  background: #3285dd;
+}
+/*========================================
+
+
+/*========================================
+Estilos Checkbox Personalizados
+==========================================*/
+.contenedor-cbx {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px; /* Reducir el padding izquierdo */
+  margin-bottom: 10px; /* Reducir el margen inferior */
+  cursor: pointer;
+  font-size: 13px; /* Ajustar el tamaño del texto */
+  color: var(--color-texto);
+  user-select: none;
+}
+
+.contenedor-cbx input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.contenedor-cbx .cbx-marca {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px; /* Reducir el alto */
+  width: 18px; /* Reducir el ancho */
+  background: transparent;
+  border: 1px solid var(--color-texto);
+  border-radius: 2px;
+  transition: all .8s ease;
+}
+
+.contenedor-cbx:hover input ~ .cbx-marca {
+  border: 1px solid var(--color-celeste);
+}
+
+.contenedor-cbx .cbx-marca::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f00c';
+  font-size: 12px; /* Ajustar el tamaño del icono */
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 2px;
+  color: #fff;
+}
+
+.contenedor-cbx input:checked ~ .cbx-marca::after {
+  display: block;
+}
+
+.contenedor-cbx input:checked ~ .cbx-marca {
+  background: var(--color-celeste) !important;
+  border: 1px solid var(--color-celeste) !important;
+}
+
+/*========================================
+Animación a los checkbox
+==========================================*/
+.contenedor-cbx.animate input:checked ~ .cbx-marca {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*========================================
+Estilos mensajes de error
+==========================================*/
+.error-text {
+  background: var(--color-rgba-rojo);
+  border-radius: 4px;
+  padding: 6px 18px; /* Reducir el padding */
+  margin-bottom: 8px; /* Reducir el margen inferior */
+  display: none;
+}
+
+.error-text p {
+  font-size: 12px; /* Ajustar el tamaño del texto */
+  color: var(--color-rojo);
+}
+
+.error-text.active {
+  display: block;
+}
+
+.cbx-error .cbx-marca {
+  -webkit-animation: cbx_error .2s ease-in-out infinite;
+  animation: cbx_error .2s ease-in-out infinite;
+  border: 1px solid var(--color-rojo);
+}
+
+@keyframes cbx_error {
+  0% {
+      -webkit-transform: rotateX(-5deg);
+      transform: rotateX(-5deg);
+  }
+  50% {
+      -webkit-transform: rotateX(0deg) scale(.8);
+      transform: rotateX(0deg) scale(.8);
+  }
+  100% {
+      -webkit-transform: rotateX(5deg);
+      transform: rotateX(5deg);
+  }
+}
+
+/*========================================
+Responsive
+==========================================*/
+/*========================================
+  @media query - pantalla movil
+==========================================*/
+@media screen and (max-width: 812px) {
+  .contenido-slider .slider-texto {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  
+
+  .contenedor-form {
+      padding: 50px;
+  }
+
+  .prev,.next{
+      display: none;
+  }
+
+  .contenido-slider {
+      width: 100%;
+      top: 30px;
+  }
+
+  .contenido-slider .slider-texto {
+     padding: 0px 30px;
+  }
+}

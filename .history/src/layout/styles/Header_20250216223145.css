@@ -24,19 +24,19 @@
   text-decoration: none;
 }
 .header__logo {
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%; 
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: 100px; /* Ajusta el tamaño de la imagen */
+  border-radius: 40%; /* Hace que la imagen sea redonda */
   object-fit: cover; /* Asegura que la imagen no se distorsione */
   
   margin-top: auto; 
-  margin-bottom: auto; 
+  margin-bottom: auto; /* Centra la imagen verticalmente */
   
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto; /* Centra la imagen horizontalmente */
+  margin-right: auto; /* Centra la imagen horizontalmente */
   
-  padding-left: 15px; 
-  padding-right: 15px; 
+  padding-left: 15px; /* Ajusta el espacio en el lado izquierdo */
+  padding-right: 15px; /* Ajusta el espacio en el lado derecho */
 }
 
 .header__page-name {

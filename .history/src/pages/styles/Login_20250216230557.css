@@ -83,7 +83,7 @@
 .login__input {
   padding: 10px 15px;
   border: 1px solid var(--color-lila); /* Borde lila */
-  font-size: 15px;
+  font-size: 14px;
   background-color: var(--color-blanquito); /* Fondo blanco para inputs */
 }
 
@@ -94,14 +94,13 @@
   background-color: var(--color-fussia); /* Botón de envío en fucsia */
   color: var(--color-blanquito);
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .login__text-footer span {
   color: var(--color-fussia) ;
   cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
 }
 
 .login__text-footer span:hover {

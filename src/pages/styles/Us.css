@@ -1,0 +1,287 @@
+
+:root {
+    --color-lila: #C291F2;
+    --color-texto: #000000;
+    --color-fussia: #D504D9;
+    --color-azul: #79C4F2;
+    --color-mostaza: #F2B705;
+    --color-naranja: #F28705;
+    --color-input: #EEF5F9;
+    --color-blanquito: #ffffff;
+    --color-celeste: #79C4F2;
+    --color-rgba-rojo: rgba(255, 0, 0, 0.1);
+    --color-rojo: #FF0000;
+}
+
+/* Estilo general para los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: var(--color-input); /* Color del enlace */
+}
+
+/* Estilo para el span con efecto hover */
+span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-blanquito);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto hover para el span */
+span:hover {
+    background: linear-gradient(135deg, var(--color-azul), var(--color-azul)); /* Degradado */
+    transform: scale(1.1); /* Agrandado */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumento de sombra */
+}
+
+/* Estilos para los enlaces de navegación */
+.nav_link {
+    margin-right: 20px;
+}
+
+.nav_link a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color-blanquito);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Efecto hover para los enlaces */
+.nav_link a:hover {
+    background-color: var(--color-blanquito);
+    color: var(--color-fussia);
+}
+
+/* Estilos del formulario de búsqueda */
+.navbar_search {
+    position: relative;
+}
+
+.search_icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en el ícono de búsqueda */
+.search_icon:hover img {
+    transform: scale(1.2);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar_nav {
+        flex-direction: column;
+    }
+
+    .nav_list {
+        flex-direction: column;
+    }
+
+    .nav_link {
+        margin-bottom: 10px;
+    }
+}
+
+/* Contenedor de la barra de navegación */
+.container-navbar {
+    background-color: var(--color-lila);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Diseño de la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_logo img {
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 10%;
+}
+
+.navbar_logo span {
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--color-naranja);
+}
+
+/* Estilos adicionales para la navbar en dispositivos pequeños */
+.navbar_nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_nav>* {
+    margin-left: 40px;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+}
+
+.nav_link {
+    margin-left: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav_link a {
+    color: var(--color-blanquito);
+    position: relative;
+}
+
+.nav_link a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-mostaza);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav_link:hover a::after {
+    opacity: 1;
+}
+
+/* Estilos para el ícono de búsqueda */
+.search_icon img {
+    height: 28px;
+}
+
+.navbar_toogle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos para el botón de "Iniciar sesión" */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-blanquito);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-primary {
+    background-color: var(--color-azul);
+}
+
+.button-saber-mas {
+    margin-left: 10px;
+}
+
+.button-primary:hover {
+    background-color: #558BBF;
+    color: var(--color-blanquito);
+    transform: translateY(-2px);
+}
+
+.navbar_mobile-menu {
+    display: none;
+}
+
+/* Estilos para la navbar móvil */
+@media only screen and (max-width: 895px) {
+    .nav_list {
+        display: none;
+    }
+
+    .navbar_nav>* {
+        margin-left: 20px;
+    }
+
+    .navbar_mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 130px;
+        right: 0;
+        background-color: var(--color-lila);
+        width: 100%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav_link-mobile {
+        margin-left: 40px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+
+    .nav_list-mobile {
+        list-style: none;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .nav_list-mobile a {
+        color: var(--color-blanquito);
+        position: relative;
+        text-decoration: none;
+    }
+
+    .nav_link-mobile a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color-mostaza);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav_link-mobile:hover a::after {
+        opacity: 1;
+    }
+
+    .navbar_toogle-btn {
+        display: block;
+    }
+
+    .navbar_toogle-btn img {
+        height: 28px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .search_icon {
+        display: none;
+    }
+
+    .button-saber-mas {
+        margin: 0;
+    }
+}

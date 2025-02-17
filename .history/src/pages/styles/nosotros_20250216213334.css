@@ -1,0 +1,622 @@
+
+:root{
+    --color-lila:#C291F2;
+    --color-texto:#000000;
+    --color-fussia:#D504D9;
+    --color-azul:#79C4F2;
+    --color-mostaza:#F2B705;
+    --color-naranja:#F28705;
+    --color-input:#EEF5F9;
+--color-blanquito:#ffffff;  
+    --color-celeste: #79C4F2; 
+    --color-rgba-rojo: rgba(255, 0, 0, 0.1); 
+    --color-rojo: #FF0000; 
+   
+}
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: var(--color-input); /* Usa el color que hereda del elemento padre (en este caso, el `span`) */
+}
+/* Estilos para el span */
+span {
+    font-size: 2rem; 
+    font-weight: bold; 
+    color: var(white);
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    transition: all 0.3s ease-in-out; /* Transición suave para hover */
+}
+
+/* Efecto hover */
+span:hover {
+    background: linear-gradient(135deg, var(--color-azul), var(--color-azul)); /* Cambio de degradado en hover */
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el cursor */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+}
+
+.header_info{
+    background-color: var(--color-blanquito);
+    text-align: end;
+    color: var(--color-blanquito);
+    overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+    white-space: nowrap; /* Evita que el texto se envuelva en varias líneas */
+}
+.header_info p {
+    display: inline-block; /* Permite la transformación */
+    font-family: sans-serif;
+    color: var(--color-azul);
+    font-weight: 700;
+    padding: 5px 25px 5px 0;
+    animation: moveText 10s linear infinite; /* Cambia la duración según lo desees */
+}
+
+/* Keyframes para la animación del texto */
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/*______________________________________________________________*/
+/* Estilos generales para la barra de navegación */
+.navbar_nav {
+    display: flex;
+    justify-content: space-between; /* Separar los elementos de la barra (links y buscador) */
+    align-items: center;
+    background-color: var(--color-lila); /* Fondo de la navbar */
+    padding: 15px 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Lista de navegación */
+.nav_list {
+    display: flex; /* Alinear los elementos en fila */
+    list-style: none; /* Eliminar viñetas de lista */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para cada enlace */
+.nav_link {
+    margin-right: 20px; /* Espaciado entre enlaces */
+}
+
+.nav_link a {
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: var(--color-blanquito); /* Color del texto */
+    padding: 8px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto hover para los enlaces */
+.nav_link a:hover {
+    background-color: var(--color-blanquito); /* Color de fondo al hacer hover */
+    color: var(--color-fussia); /* Color de texto al hacer hover */
+}
+
+/* Estilos del formulario de búsqueda */
+.navbar_search {
+    position: relative;
+}
+
+.search_icon img {
+    width: 30px; /* Tamaño del ícono */
+    height: 30px;
+    cursor: pointer; /* Cambiar el cursor a una mano */
+    transition: transform 0.3s ease; /* Transición para la animación */
+}
+
+/* Efecto hover en el ícono de búsqueda */
+.search_icon:hover img {
+    transform: scale(1.2); /* Aumentar tamaño ligeramente */
+}
+
+/* Adaptar el diseño en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar_nav {
+        flex-direction: column; /* Cambiar la barra de navegación a columna */
+    }
+
+    .nav_list {
+        flex-direction: column; /* Alinear los enlaces en columna */
+    }
+
+    .nav_link {
+        margin-bottom: 10px; /* Espaciado entre los enlaces en columna */
+    }
+}
+
+
+.container-navbar{
+    background-color: var(--color-lila);
+    display: flex;
+    justify-content: center;
+    width: 100% ;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.navbar_logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar_logo img{
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 10%;
+}
+.navbar_logo span{
+    
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--bottons);
+}
+.navbar_nav{
+    display: flex;
+    align-items: center;
+
+}
+.navbar_nav>*{
+    margin-left: 40px;
+}
+.nav_list{
+    display: flex;
+    list-style: none;
+}
+.nav_link{
+    margin-left: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.nav_link a{
+    color: var(--color-blanquito);
+    position: relative;
+}
+.nav_link a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+.nav_link:hover a::after{
+    opacity: 1;
+}
+.search_icon img{
+    height: 28px;
+
+}
+.navbar_toogle-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+
+}
+
+/* Estilo para el botón de Iniciar Sesión */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-blanquito);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-primary {
+    background-color: #79C4F2; /* Color azul */
+}
+
+.button-saber-mas {
+    margin-left: 10px; /* Ajusta el margen si es necesario */
+}
+
+.button-primary:hover {
+    background-color: #558BBF;
+    color: var(--color-blanquito); /* Un tono más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de levitar ligeramente */
+}
+
+.navbar_mobile-menu{
+    display: none;
+}
+@keyframes moveText {
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(-100%)
+
+    }
+
+}
+@media only screen and (max-width: 895px){
+   .nav_list{
+    display: none;
+
+   }
+   .navbar_nav>*{
+    margin-left: 20px;
+   }
+   .navbar_mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    background-color: var(--background-gray);
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) ; 
+    z-index: 1;
+
+
+   }
+   .nav_link-mobile{
+    margin-left: 40px;
+    font-size: 1.1rem;
+    font-weight: 500px;
+    margin-top: 5px ;
+   }
+   .nav_list-mobile{
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 15px;
+   }
+   .nav_list-mobile a{
+    color: var(--bottons);
+    position: relative;
+    text-decoration: none;
+   }
+   .nav_link-mobile a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.nav_link-mobile:hover a::after{
+    opacity: 1;
+}
+.navbar_toogle-btn{
+    display: block;
+    margin: 0;
+
+}
+.navbar_toogle-btn img{
+    height: 28px;
+    margin: 0 10px;
+}
+}
+
+@media only screen and (max-width:510px) {
+    .search_icon{
+        display: none;
+    }
+    .button-saber-mas{
+        margin:0 ;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    footer{
+        position: relative;
+        width: 100%;
+        background-color: var(--color-lila);
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer .social_icon,
+    footer .menuu{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+    footer .social_icon li,
+    footer .menuu li{
+        list-style: none;
+    }
+    footer .social_icon li a{
+        font-size: 2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+    }
+    footer .social_icon li a:hover{
+    transform: translateY(-10px);
+    }
+    footer .menuu li a{
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        text-decoration: none;
+        opacity: 0.75;
+    }
+    footer .menuu li a:hover{
+        opacity: 1;
+    }
+    footer p {
+        color: #fff;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+    footer.wave{
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(/img/icono3.png.png);
+        background-size: 1000px 100px;
+    }
+    footer .wave#wave1{
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWave 4s linear infinite;
+    }
+    footer .wave#wave2{
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animateWave 4s linear infinite;
+    }
+    footer .wave#wave3{
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15;
+        animation: animateWave 4s linear infinite;
+    }
+    footer .wave#wave4{
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animateWave 4s linear infinite;
+    }
+    
+    @keyframes animateWave{
+        0%{
+            background-position-x: 1000px;
+        }
+        100%{
+            background-position-x: 0px;
+        }
+    }
+    @keyframes animateWave_02{
+        0%{
+            background-position-x: 0px;
+        }
+        100%{
+            background-position-x: 1000px;
+        }
+    
+    }
+    .izquierda{
+        background: #daa32c;
+        height: 80vh;
+        width: 30%;
+        padding-top: 5%;
+       
+    
+    }
+    
+    .derecha{
+        background: url(/img/img_galeria/sandwich3.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 70%;
+        height: 80vh;
+    }
+    #pantalla-dividida{
+        display: flex;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .creative{
+        color: #eddddd;
+    }
+    h1{
+        font-size: 45px;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 40px;
+        margin-left: 80px;
+        margin-top: 60px;
+    }
+    .izquierda p{
+        font-size: 19px;
+        line-height: 30px;
+        width: 50%;
+        margin: auto;
+        margin-left: 80px;
+    
+    }
+    .link a{
+        border: 1px solid #ffffff;
+        padding: 20px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 30px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+        margin-top: 30px;
+    }
+    .link{
+        text-align: center;
+    }
+    
+    .sana{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #7d0b0b;
+            margin: 10%;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            padding-left: 50px;
+            padding-top: 10px;
+            color: var(--fondo);
+    }
+    .mm{
+        color: #ffffff;
+    }
+    .nn{
+        color: #f4e2e2;
+    }
+    .parrafito{
+        background-color: #00000000;
+        font-size: 21px;
+        line-height: 20px;
+        width: 50%;
+        margin-left: 50px;
+        margin-bottom: 40px;
+        height: 40px;
+        margin: auto;
+    
+    }
+    
+    .opiniones .caja-contenedor{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    
+    }
+    .opiniones .caja-contenedor .caja{
+        background-color: #dddddd;
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        border: 1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+        flex: 1 1 30rem;
+        border-radius: .5rem;
+        color: var(--black)
+    
+    }
+    
+    .opiniones .caja-contenedor.caja .starts{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        font-size: 8rem;
+        color: var(--fondoh);
+    
+    }
+    .opiniones .caja-contenedor .caja .user img{
+        border-radius: 50%;
+        object-fit: cover;
+        height: 8rem;
+        width: 8rem;
+        margin-top: 2rem;
+    
+    }
+    .opiniones .caja-contenedor .caja .user h3{
+        color: var(--botton);
+        font-size: 2rem;
+    }
+    
+    .opiniones .caja-contenedor .caja .user .stars  {
+        color: var(--botton);
+        padding: 1rem;
+    }
+    .opiniones .caja-contenedor .caja .comentarios{
+        color: #000000;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+.sobre-nosotros {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    color: #D504D9; /* Color fucsia */
+}
+
+.mision-vision {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.mision, .vision {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.mision img, .vision img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+.valores {
+    margin-top: 50px;
+    color: #000000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.valores h3 {
+    color: var(--color-fussia); /* Azul */
+}
+
+.valores ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.valores li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}

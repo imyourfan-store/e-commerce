@@ -1,0 +1,245 @@
+:root {
+  --color-lila: #C291F2;
+  --color-texto: #000000;
+  --color-fussia: #D504D9;
+  --color-azul: #79C4F2;
+  --color-mostaza: #F2B705;
+  --color-naranja: #F28705;
+  --color-input: #EEF5F9;
+  --color-celeste: #79C4F2;
+  --color-rgba-rojo: rgba(255, 0, 0, 0.1);
+  --color-rojo: #FF0000;
+}
+
+.input-error {
+  border: 1px solid var(--color-rojo) !important;
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f9fd;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Contenedor general */
+.contenedor-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+/* Estilos del contenedor del slider */
+.contenedor-slider {
+  width: calc(100% - 520px);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  justify-content: center;
+  position: relative;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide img {
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+}
+
+/* Animación de desvanecimiento */
+.fade {
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Botones de navegación */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  background: var(--color-texto);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  outline: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background: var(--color-rojo);
+}
+
+/* Puntos del slider */
+.dots {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+}
+
+.dots .dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  border: 1px solid var(--color-celeste);
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.6s ease-in-out;
+}
+
+.dots .dot.active {
+  background: var(--color-celeste);
+  width: 30px;
+}
+
+/* Estilos para el contenedor de texto */
+.contenedor-texto {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--color-lila), var(--color-azul), var(--color-fussia));
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animación de gradiente */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+/* Estilo de contenedor de formulario */
+.contenedor-form {
+  width: 80%;
+  max-width: 400px;
+  padding: 30px;
+  background: var(--color-input);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del formulario */
+.contenedor-form .titulo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--color-texto);
+}
+
+/* Estilo de los enlaces */
+.link {
+  font-size: 13px;
+  color: var(--color-celeste);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el botón */
+.formulario .btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: var(--color-celeste);
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.formulario .btn:hover {
+  background: #3285dd;
+}
+
+/* Estilos para checkbox personalizados */
+.contenedor-cbx {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-texto);
+}
+
+.contenedor-cbx input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.contenedor-cbx .cbx-marca {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid var(--color-texto);
+  border-radius: 2px;
+  transition: all .8s ease;
+}
+
+.contenedor-cbx input:checked ~ .cbx-marca::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f00c';
+  color: white;
+}
